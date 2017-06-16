@@ -7,7 +7,7 @@ public class Main {
 		String aString = "Jeff";
 		System.out.println("Your name is  " + aString);
 		
-
+		HelperClassMethod test = new HelperClassMethod();
+		test.declarePrimitives();
 	}
-
 }
