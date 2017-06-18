@@ -1,4 +1,4 @@
-package com.training.java;
+package com.training.java.MaxValues;
 
 public class MaxValues {
 // The point of this lesson is to emphasize the fact that if a primitive data type exceeds it's max value, it wraps back around to it's
@@ -9,6 +9,6 @@ public class MaxValues {
 		if (b < Byte.MAX_VALUE){
 		b++;
 		}
-		System.out.println("Byte " + b");
+		System.out.println("Byte " + b);
 	}
 }
