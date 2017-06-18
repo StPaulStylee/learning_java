@@ -3,11 +3,21 @@ package com.training.java;
 public class Main {
 
 	public static void main(String[] args) {
-		System.out.println("Hello from Eclipse!");
-		String aString = "Jeff";
-		System.out.println("Your name is  " + aString);
 		
-		HelperClassMethod test = new HelperClassMethod();
-		test.declarePrimitives();
+		byte b = 1;
+		short sh = 1;
+		int i = 1;
+		long l = 1L;
+		
+		float f = 1f;
+		double d = 1d;
+		
+		System.out.println("Byte " + b);
+		System.out.println("Short " + sh);
+		System.out.println("Int " + i);
+		System.out.println("long " + l);
+		System.out.println("Float " + f);
+		System.out.println("Double " + d);
+
 	}
 }
