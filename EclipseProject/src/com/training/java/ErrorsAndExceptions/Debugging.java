@@ -7,7 +7,7 @@ public class Debugging {
 		String welcome = "Welcome!";
 		char[] chars = welcome.toCharArray();
 		
-		for (int i = 0; i < chars.length; i++0
+		for (int i = 0; i < chars.length; i++)
 			System.out.println(chars[i]);
 		
 	}

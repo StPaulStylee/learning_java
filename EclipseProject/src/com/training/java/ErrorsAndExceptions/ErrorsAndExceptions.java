@@ -7,11 +7,18 @@ public class ErrorsAndExceptions {
 		String s = null;
 		
 		System.out.println(s);
-	
 		String welcome = "Welcome!";
+		char lastChar;
 		char[] chars = welcome.toCharArray();
-		char lastChar = chars[chars.length - 1];
-		System.out.println(lastChar);
+
+		
+		try {
+			lastChar = chars[chars.length];
+			System.out.println(lastChar);
+		} catch (ArrayIndexOutOfBoundsException e) {
+			e.printStackTrace();
+		}
+		
 	}
 
 }
