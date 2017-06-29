@@ -13,6 +13,9 @@ public class ErrorsAndExceptions {
 
 		
 		try {
+			if (chars.length < 10) {
+				throw (new Exception("My custom exception, bitches!"));
+			}
 			lastChar = chars[chars.length - 1];
 			System.out.println(lastChar);
 			
@@ -23,6 +26,8 @@ public class ErrorsAndExceptions {
 			System.out.println("Ya gone fucked up!");
 		} catch (StringIndexOutOfBoundsException e) {
 			System.out.println("Why you gotta try and make a substring all incorrectly!?");
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
 		}
 		
 	}
