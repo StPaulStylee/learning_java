@@ -21,6 +21,9 @@ public class SimpleCalculator {
 		double d2 = f2.doubleValue();
 
 		System.out.println("The sum of the values is: " + (d1 + d2));
+		
+		// A quicker and simpler way to solve this problem is to use two string at your initial primitives, then use the 
+		// Double helper class to parse the strings into doubles, then add them together.
 	}
 
 }
