@@ -13,10 +13,16 @@ public class ErrorsAndExceptions {
 
 		
 		try {
-			lastChar = chars[chars.length];
+			lastChar = chars[chars.length - 1];
 			System.out.println(lastChar);
+			
+			String sub = welcome.substring(10);
+			
 		} catch (ArrayIndexOutOfBoundsException e) {
-			e.printStackTrace();
+//			e.printStackTrace();
+			System.out.println("Ya gone fucked up!");
+		} catch (StringIndexOutOfBoundsException e) {
+			System.out.println("Why you gotta try and make a substring all incorrectly!?");
 		}
 		
 	}
