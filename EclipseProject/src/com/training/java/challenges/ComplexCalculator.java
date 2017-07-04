@@ -18,12 +18,16 @@ public class ComplexCalculator {
 	}
 	
 	public static void setValues() {
+	  try {	
 		System.out.println("Enter the 1st value: ");
 		input1 = sc.nextLine();
 		value1 = Double.parseDouble(input1);
 		System.out.println("Enter the 2nd value: ");
 		input2 = sc.nextLine();
 		value2 = Double.parseDouble(input2);
+	  } catch (Exception e) {
+		  System.out.println("The value is not formatted correctly " + e.getMessage());
+	  }
 	}
 	
 	public static void setOperator() {
@@ -47,6 +51,7 @@ public class ComplexCalculator {
 			break;
 		default:
 			System.out.println("You did not choose a valid operand. Please start over.");
+			return;
 		}
 	}
 
