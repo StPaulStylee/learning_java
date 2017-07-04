@@ -24,8 +24,9 @@ public class SimplyArray {
 		
 		System.out.println("Setting an initial size: ");
 		int[] sized = new int[10];
+	
 		for (int value : sized) { // DONT FORGET THAT YOU HAVE TO DECLARE TYPE IN A FOR/EACH LOOP
-			
+			System.out.println(value);
 		}
 		
 		
