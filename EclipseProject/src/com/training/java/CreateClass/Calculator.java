@@ -3,50 +3,50 @@ package com.training.java.CreateClass;
 import java.util.Scanner;
 
 public class Calculator {
-	
-	static String input1;
-	static String input2;
-	static String operator;
-	static Double value1;
-	static Double value2;
-	
-	static Scanner sc = new Scanner(System.in);
-	
-	public static void setValues() {
-	  try {	
-		System.out.println("Enter the 1st value: ");
-		input1 = sc.nextLine();
-		value1 = Double.parseDouble(input1);
-		System.out.println("Enter the 2nd value: ");
-		input2 = sc.nextLine();
-		value2 = Double.parseDouble(input2);
-	  } catch (Exception e) {
-		  System.out.println("The value is not formatted correctly " + e.getMessage());
-	  }
+
+    public static void main(String[] args) {
+        Calculator calc = new Calculator();
+    	calc.calculate();
+    }
+	protected void calculate() {
+		InputHelper helper = new InputHelper();
+		String s1 = helper.getInput("Enter a numeric value: ");
+        String s2 = helper.getInput("Enter a numeric value: ");
+        String op = helper.getInput("Choose an operation (+ - * /):");
+
+        double result = 0;
+
+        try {
+            switch (op) {
+                case "+":
+                    result = MathHelper.addValues(s1, s2);
+                    break;
+                case "-":
+                    result = MathHelper.subtractValues(s1, s2);
+                    break;
+                case "*":
+                    result = MathHelper.multiplyValues(s1, s2);
+                    break;
+                case "/":
+                    result = MathHelper.divideValues(s1, s2);
+                    break;
+                default:
+                    System.out.println("Unrecognized operation!");
+                    return;
+            }
+
+            System.out.println("The answer is " + result);
+
+        } catch (Exception e) {
+            System.out.println("Number formatting exception " + e.getMessage());
+        }
 	}
-	
-	public static void setOperator() {
-		System.out.println("Choose your operator: + , - , * , / : ");
-		operator = sc.nextLine();
-	}
-	
-	public static void getSolution() {
-		switch(operator) {
-		case "+":
-			System.out.println("The sum of the value is: " + (value1 + value2));
-			break;
-		case "-":
-			System.out.println("The subtracted values equal: " + (value1 - value2));
-			break;
-		case "*":
-			System.out.println("The product of the values is: " + (value1 * value2));
-			break;
-		case "/":
-			System.out.println("The divided values equal: " + (value1 / value2));
-			break;
-		default:
-			System.out.println("You did not choose a valid operand. Please start over.");
-			return;
+		class InputHelper {
+	        private String getInput(String prompt) {
+	            System.out.print(prompt);
+	            Scanner sc = new Scanner(System.in);
+	            return sc.nextLine();
+	        }
 		}
-	}
-}
+
+   }
