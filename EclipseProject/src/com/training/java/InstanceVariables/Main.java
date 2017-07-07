@@ -11,13 +11,15 @@ public class Main {
 		Olives olive1 = new Olives();
 		olives.add(olive1);
 		Olives olive2 = new Olives();
+		olive2.setOil(5);
 		olives.add(olive2);
 		Olives olive3 = new Olives();
+		olive3.setOil(2);
 		olives.add(olive3);
 		
 		OlivePress press = new OlivePress();
-		press.getOil(olives);
-
+		int totalOil = press.getOil(olives);
+		System.out.println(totalOil);
 	}
 
 }
