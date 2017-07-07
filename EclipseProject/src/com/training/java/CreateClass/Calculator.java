@@ -1,13 +1,15 @@
-package com.training.java.challenges;
+package com.training.java.CreateClass;
 
 import java.util.Scanner;
 
-public class ComplexCalculator {
+public class Calculator {
+	
 	static String input1;
 	static String input2;
 	static String operator;
 	static Double value1;
 	static Double value2;
+	
 	static Scanner sc = new Scanner(System.in);
 	
 	public static void setValues() {
@@ -47,5 +49,4 @@ public class ComplexCalculator {
 			return;
 		}
 	}
-
 }
