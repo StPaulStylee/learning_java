@@ -1,8 +1,13 @@
 package com.training.java.InstanceVariables;
 
 public class Olives {
+	
+	public static final String KALAMATA = "Kalamata";
+	public static final String LIGURIAN = "Ligurian";
+	public static final String GREEN = "Green";
+	
 	// We make the 3 instance variables private so that they can only be accessed by the getters and setters of it's class instances
-	private String name = "Kalamata";
+	private String name = KALAMATA;
 	private long color = 0x2E0854;
 	private int oil = 3;
 	
